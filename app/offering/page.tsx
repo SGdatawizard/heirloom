@@ -79,7 +79,7 @@ export default function OfferingPage() {
       <section id="tiers" className="band scroll-mt-24 bg-ivory">
         <div className="shell">
           <Reveal>
-            <p className="eyebrow">The ladder</p>
+            <p className="eyebrow-light">The ladder</p>
             <h2 className="display-lg mt-6 max-w-[20ch] text-ink">
               Three tiers, one standard of material
             </h2>
@@ -101,7 +101,7 @@ export default function OfferingPage() {
                 <div>
                   <p
                     className={`font-ledger text-[10px] uppercase tracking-eyebrow ${
-                      tier.featured ? 'text-champagne' : 'text-gold'
+                      tier.featured ? 'text-champagne' : 'text-bronze'
                     }`}
                   >
                     {tier.entry}
@@ -139,7 +139,7 @@ export default function OfferingPage() {
                           : 'border-ink/10 text-slate'
                       }`}
                     >
-                      <span className={tier.featured ? 'text-gold' : 'text-gold'}>—</span>
+                      <span className={tier.featured ? 'text-gold' : 'text-bronze'}>—</span>
                       <span>{line}</span>
                     </li>
                   ))}
@@ -196,7 +196,7 @@ export default function OfferingPage() {
       <section className="band bg-ivory">
         <div className="shell grid gap-16 lg:grid-cols-2 lg:gap-24">
           <Reveal>
-            <p className="eyebrow">Why £2,500</p>
+            <p className="eyebrow-light">Why £2,500</p>
             <h2 className="display-lg mt-6 text-ink">The entry point is deliberate</h2>
           </Reveal>
           <Reveal delay={80}>
