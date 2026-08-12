@@ -50,12 +50,12 @@ export function LoginForm() {
 
   if (status === 'sent') {
     return (
-      <div className="border border-gold/50 p-8 md:p-10">
-        <p className="eyebrow">Link sent</p>
-        <h2 className="mt-5 font-display text-2xl font-light text-ivory">
+      <div className="border border-gold bg-paper p-8 md:p-10">
+        <p className="eyebrow-light">Link sent</p>
+        <h2 className="mt-5 font-display text-2xl font-light text-ink">
           Check {email}
         </h2>
-        <p className="mt-4 text-[14px] leading-relaxed text-mist">
+        <p className="mt-4 text-[14px] leading-relaxed text-slate">
           The link signs you in once and expires in an hour. If it has not arrived in a few
           minutes, look in your spam folder or call your relationship manager.
         </p>
@@ -66,7 +66,7 @@ export function LoginForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-8">
       <div>
-        <label className="label" htmlFor="email">
+        <label className="label-light" htmlFor="email">
           Email on your Heirloom account
         </label>
         <input
@@ -77,13 +77,13 @@ export function LoginForm() {
           autoComplete="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="field"
+          className="field field-light"
           placeholder="you@example.com"
         />
       </div>
 
       {status === 'error' ? (
-        <p className="border border-gold/50 px-5 py-4 text-[13px] leading-relaxed text-champagne">
+        <p className="border border-gold px-5 py-4 text-[13px] leading-relaxed text-bronze">
           {error}
         </p>
       ) : null}
@@ -92,7 +92,7 @@ export function LoginForm() {
         {status === 'sending' ? 'Sending link' : 'Email me a sign-in link'}
       </button>
 
-      <p className="text-[12px] leading-relaxed text-mist/50">
+      <p className="text-[12px] leading-relaxed text-slate/70">
         Accounts are opened by Stanley Gibbons when an Heirloom agreement begins. If you are not
         yet a client, make an enquiry and we will arrange a conversation first.
       </p>
