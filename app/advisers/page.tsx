@@ -85,14 +85,14 @@ export default function AdvisersPage() {
       <section className="band bg-ivory">
         <div className="shell">
           <Reveal>
-            <p className="eyebrow">What we bring to the relationship</p>
+            <p className="eyebrow-light">What we bring to the relationship</p>
             <h2 className="display-lg mt-6 max-w-[18ch] text-ink">Four things you can offer tomorrow</h2>
           </Reveal>
 
           <div className="mt-16 grid gap-px bg-ink/10 sm:grid-cols-2">
             {forAdvisers.map((item, i) => (
               <Reveal key={item.title} delay={i * 70} className="bg-ivory p-9 md:p-11">
-                <p className="font-ledger text-[10px] uppercase tracking-eyebrow text-gold">
+                <p className="font-ledger text-[10px] uppercase tracking-eyebrow text-bronze">
                   {`0${i + 1}`}
                 </p>
                 <h3 className="mt-6 font-display text-2xl font-light text-ink">{item.title}</h3>
