@@ -84,7 +84,7 @@ export default function HeritagePage() {
       <section className="band bg-ivory">
         <div className="shell">
           <Reveal>
-            <p className="eyebrow">The line</p>
+            <p className="eyebrow-light">The line</p>
             <h2 className="display-lg mt-6 max-w-[16ch] text-ink">
               A sequence, because the order is the point
             </h2>
@@ -94,7 +94,7 @@ export default function HeritagePage() {
             {timeline.map((item, i) => (
               <Reveal as="li" key={item.year} delay={i * 60}>
                 <div className="grid gap-4 border-b border-ink/15 py-9 md:grid-cols-[7rem_1fr_1.4fr] md:gap-10">
-                  <span className="font-ledger text-[12px] tracking-[0.14em] text-gold">
+                  <span className="font-ledger text-[12px] tracking-[0.14em] text-bronze">
                     {item.year}
                   </span>
                   <h3 className="font-display text-2xl font-light leading-snug text-ink">
