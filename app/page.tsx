@@ -10,19 +10,19 @@ export default function HomePage() {
   return (
     <SiteShell>
       {/* ── Hero: the thesis is a catalogue entry, not a claim ─────────── */}
-      <section className="relative overflow-hidden bg-vault pb-24 pt-36 md:pb-32 md:pt-44">
+      <section className="relative overflow-hidden bg-ivory pb-24 pt-36 md:pb-32 md:pt-44">
         <div
           aria-hidden
-          className="pointer-events-none absolute -right-40 top-0 h-[36rem] w-[36rem] rounded-full bg-gold/[0.06] blur-3xl"
+          className="pointer-events-none absolute -right-40 top-0 h-[40rem] w-[40rem] rounded-full bg-gold/[0.07] blur-3xl"
         />
         <div className="shell relative grid items-center gap-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">
           <div>
             <Reveal>
-              <p className="eyebrow">Stanley Gibbons · Private curation</p>
+              <p className="eyebrow-light">Stanley Gibbons · Private curation</p>
             </Reveal>
 
             <Reveal delay={80}>
-              <h1 className="display-xl mt-8 text-ivory">
+              <h1 className="display-xl mt-8 text-ink">
                 Proven,
                 <br />
                 not promised.
@@ -30,16 +30,16 @@ export default function HomePage() {
             </Reveal>
 
             <Reveal delay={160}>
-              <div className="mt-10 h-px w-full max-w-md origin-left bg-gradient-to-r from-gold via-gold/30 to-transparent" />
+              <div className="rule-gold-light mt-10 max-w-md" />
             </Reveal>
 
             <Reveal delay={200}>
-              <p className="lede mt-10 text-mist">
+              <p className="lede mt-10 text-slate">
                 A private curation service for the finest stamps, coins and cards. Your pieces
                 are held in your name, chosen with a specialist alongside you, and evidenced by
                 records Stanley Gibbons has been keeping since 1856.
               </p>
-              <p className="lede mt-5 text-mist/70">
+              <p className="lede mt-5 text-slate/80">
                 Provenance proven by the record. Rarity measured against the catalogue the market
                 runs on. Value shown in realisations you can check yourself.
               </p>
@@ -50,7 +50,7 @@ export default function HomePage() {
                 <Link href="/enquire" className="btn btn-gold">
                   Request an introduction
                 </Link>
-                <Link href="/the-record" className="btn btn-ghost">
+                <Link href="/the-record" className="btn btn-ink">
                   See the record
                 </Link>
               </div>
@@ -59,32 +59,33 @@ export default function HomePage() {
 
           {/* The signature: one piece, mounted and evidenced. */}
           <Reveal delay={240}>
-            <div className="border border-champagne/20 bg-midnight/30 p-6 md:p-8">
+            <div className="border border-ink/15 bg-paper p-6 md:p-8">
               <ImageSlot
-                label="Hero piece — a single significant stamp, shot square on black, tight crop"
+                tone="light"
+                label="Hero piece — a single significant stamp, shot square on a pale ground, tight crop"
                 ratio="4 / 3"
                 priority
               />
 
               <div className="mt-7">
-                <p className="font-ledger text-[10px] uppercase tracking-eyebrow text-gold">
+                <p className="font-ledger text-[10px] uppercase tracking-eyebrow text-bronze">
                   {sampleRecord.reference}
                 </p>
-                <h2 className="mt-2 font-display text-2xl font-light leading-snug text-ivory">
+                <h2 className="mt-2 font-display text-2xl font-light leading-snug text-ink">
                   {sampleRecord.title}
                 </h2>
-                <p className="mt-1 font-ledger text-[11px] uppercase tracking-[0.1em] text-mist/60">
+                <p className="mt-1 font-ledger text-[11px] uppercase tracking-[0.1em] text-slate">
                   {sampleRecord.detail}
                 </p>
               </div>
 
               <Ledger className="mt-6">
                 {sampleRecord.rows.map((row) => (
-                  <LedgerRow key={row.label} label={row.label} value={row.value} />
+                  <LedgerRow key={row.label} tone="light" label={row.label} value={row.value} />
                 ))}
               </Ledger>
 
-              <p className="mt-5 text-[11px] leading-relaxed text-mist/45">
+              <p className="mt-5 text-[11px] leading-relaxed text-slate/70">
                 {sampleRecord.footnote}
               </p>
             </div>
@@ -127,7 +128,7 @@ export default function HomePage() {
       <section className="band bg-ivory">
         <div className="shell">
           <Reveal>
-            <p className="eyebrow">What we stand behind</p>
+            <p className="eyebrow-light">What we stand behind</p>
             <h2 className="display-lg mt-6 max-w-[16ch] text-ink">
               Three claims. Each one you can hold in your hand.
             </h2>
@@ -136,7 +137,7 @@ export default function HomePage() {
           <div className="mt-16 grid gap-px bg-ink/10 md:grid-cols-3">
             {pillars.map((pillar, i) => (
               <Reveal key={pillar.id} delay={i * 90} className="bg-ivory p-8 md:p-10">
-                <p className="font-ledger text-[10px] uppercase tracking-eyebrow text-gold">
+                <p className="font-ledger text-[10px] uppercase tracking-eyebrow text-bronze">
                   {pillar.title}
                 </p>
                 <p className="mt-6 text-[15px] leading-[1.8] text-slate">{pillar.body}</p>
@@ -227,7 +228,7 @@ export default function HomePage() {
       <section className="band bg-ivory">
         <div className="shell">
           <Reveal>
-            <p className="eyebrow">Three ways in</p>
+            <p className="eyebrow-light">Three ways in</p>
             <h2 className="display-lg mt-6 max-w-[20ch] text-ink">
               Begin with one piece, or with a portfolio.
             </h2>
@@ -248,7 +249,7 @@ export default function HomePage() {
               >
                 <p
                   className={`font-ledger text-[10px] uppercase tracking-eyebrow ${
-                    tier.featured ? 'text-champagne' : 'text-gold'
+                    tier.featured ? 'text-champagne' : 'text-bronze'
                   }`}
                 >
                   {tier.entry}
