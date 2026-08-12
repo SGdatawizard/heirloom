@@ -67,7 +67,7 @@ export default function TheRecordPage() {
       <section className="band bg-ivory">
         <div className="shell">
           <Reveal>
-            <p className="eyebrow">A worked example</p>
+            <p className="eyebrow-light">A worked example</p>
             <h2 className="display-lg mt-6 max-w-[20ch] text-ink">
               What a documented piece actually looks like
             </h2>
@@ -84,7 +84,7 @@ export default function TheRecordPage() {
 
             <Reveal delay={100}>
               <div className="border border-ink/15 bg-paper p-8 md:p-10">
-                <p className="font-ledger text-[10px] uppercase tracking-eyebrow text-gold">
+                <p className="font-ledger text-[10px] uppercase tracking-eyebrow text-bronze">
                   {sampleRecord.reference}
                 </p>
                 <h3 className="mt-3 font-display text-3xl font-light leading-tight text-ink">
@@ -94,7 +94,7 @@ export default function TheRecordPage() {
                   {sampleRecord.detail}
                 </p>
 
-                <p className="mt-10 font-ledger text-[10px] uppercase tracking-eyebrow text-gold">
+                <p className="mt-10 font-ledger text-[10px] uppercase tracking-eyebrow text-bronze">
                   The price record
                 </p>
                 <Ledger className="mt-4">
@@ -103,7 +103,7 @@ export default function TheRecordPage() {
                   ))}
                 </Ledger>
 
-                <p className="mt-10 font-ledger text-[10px] uppercase tracking-eyebrow text-gold">
+                <p className="mt-10 font-ledger text-[10px] uppercase tracking-eyebrow text-bronze">
                   The chain of ownership
                 </p>
                 <ol className="mt-4">
@@ -112,7 +112,7 @@ export default function TheRecordPage() {
                       key={link.stage}
                       className="grid gap-2 border-b border-ink/10 py-4 sm:grid-cols-[1.5rem_1fr]"
                     >
-                      <span className="font-ledger text-[10px] text-gold">{`0${i + 1}`}</span>
+                      <span className="font-ledger text-[10px] text-bronze">{`0${i + 1}`}</span>
                       <span>
                         <span className="block font-ledger text-[11px] uppercase tracking-[0.1em] text-ink">
                           {link.stage}
