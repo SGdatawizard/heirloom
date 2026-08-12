@@ -15,15 +15,15 @@ export const metadata: Metadata = {
 export default function EnquirePage() {
   return (
     <SiteShell>
-      <section className="bg-vault pb-24 pt-40 md:pt-52">
+      <section className="bg-ivory pb-24 pt-40 md:pt-52">
         <div className="shell grid gap-16 lg:grid-cols-[1.15fr_0.85fr] lg:gap-24">
           <div>
             <Reveal>
-              <p className="eyebrow">Enquire</p>
-              <h1 className="display-lg mt-6 max-w-[16ch] text-ivory">
+              <p className="eyebrow-light">Enquire</p>
+              <h1 className="display-lg mt-6 max-w-[16ch] text-ink">
                 Start with a conversation, not a catalogue.
               </h1>
-              <p className="lede mt-8 text-mist">
+              <p className="lede mt-8 text-slate">
                 Tell us what you collect or what you would like to begin. A specialist reads every
                 enquiry personally and replies within two working days.
               </p>
@@ -31,7 +31,7 @@ export default function EnquirePage() {
 
             <Reveal delay={120}>
               <div className="mt-16">
-                <Suspense fallback={<p className="text-mist/50">Loading the form…</p>}>
+                <Suspense fallback={<p className="text-slate/60">Loading the form…</p>}>
                   <EnquiryForm />
                 </Suspense>
               </div>
@@ -39,8 +39,8 @@ export default function EnquirePage() {
           </div>
 
           <Reveal delay={100}>
-            <aside className="border border-champagne/20 p-8 md:p-10">
-              <p className="eyebrow">What happens next</p>
+            <aside className="border border-ink/15 bg-paper p-8 md:p-10">
+              <p className="eyebrow-light">What happens next</p>
               <ol className="mt-6">
                 {[
                   'We read your enquiry and match you to the right specialist.',
@@ -50,25 +50,25 @@ export default function EnquirePage() {
                 ].map((step, i) => (
                   <li
                     key={step}
-                    className="grid gap-3 border-b border-champagne/15 py-4 sm:grid-cols-[1.5rem_1fr]"
+                    className="grid gap-3 border-b border-ink/10 py-4 sm:grid-cols-[1.5rem_1fr]"
                   >
-                    <span className="font-ledger text-[10px] text-gold">{`0${i + 1}`}</span>
-                    <span className="text-[14px] leading-relaxed text-mist">{step}</span>
+                    <span className="font-ledger text-[10px] text-bronze">{`0${i + 1}`}</span>
+                    <span className="text-[14px] leading-relaxed text-slate">{step}</span>
                   </li>
                 ))}
               </ol>
 
-              <p className="mt-10 font-ledger text-[10px] uppercase tracking-eyebrow text-gold">
+              <p className="mt-10 font-ledger text-[10px] uppercase tracking-eyebrow text-bronze">
                 Direct
               </p>
               <Ledger className="mt-4">
-                <LedgerRow label="Telephone" value={site.phone} />
-                <LedgerRow label="London" value="399 Strand, WC2R" />
-                <LedgerRow label="Singapore" value="By appointment" />
+                <LedgerRow tone="light" label="Telephone" value={site.phone} />
+                <LedgerRow tone="light" label="London" value="399 Strand, WC2R" />
+                <LedgerRow tone="light" label="Singapore" value="By appointment" />
               </Ledger>
-              <a
+              
                 href={`mailto:${site.email}`}
-                className="mt-6 block font-ledger text-[11px] uppercase tracking-[0.12em] text-champagne hover:text-gold"
+                className="mt-6 block font-ledger text-[11px] uppercase tracking-[0.12em] text-bronze hover:text-ink"
               >
                 {site.email}
               </a>
