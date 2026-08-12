@@ -41,10 +41,14 @@ export default function CollectingPage() {
             >
               <Reveal className={light ? 'lg:order-2' : ''}>
                 <div className="flex items-baseline gap-5">
-                  <span className="font-display text-3xl font-light text-gold/70">
+                  <span
+                    className={`font-display text-3xl font-light ${
+                      light ? 'text-bronze/80' : 'text-gold/70'
+                    }`}
+                  >
                     {vertical.number}
                   </span>
-                  <p className="eyebrow">
+                  <p className={light ? 'eyebrow-light' : 'eyebrow'}>
                     {vertical.kind}
                     {vertical.forthcoming ? ' · To follow' : ' · At launch'}
                   </p>
