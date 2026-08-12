@@ -66,7 +66,7 @@ export default function EnquirePage() {
                 <LedgerRow tone="light" label="London" value="399 Strand, WC2R" />
                 <LedgerRow tone="light" label="Singapore" value="By appointment" />
               </Ledger>
-              
+              <a
                 href={`mailto:${site.email}`}
                 className="mt-6 block font-ledger text-[11px] uppercase tracking-[0.12em] text-bronze hover:text-ink"
               >
