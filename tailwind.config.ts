@@ -15,6 +15,7 @@ const config: Config = {
         slate: '#5D6E85',   // secondary text on light
         mist: '#9FB0C4',    // secondary text on dark
         gold: '#B08D4C',    // antique gold — accent, never bright
+        bronze: '#8A6A33',  // deeper gold for small text on cream (contrast)
         champagne: '#E3CFA4',// pale gold — hairlines, small caps
         ivory: '#F6F3EC',   // primary light surface
         paper: '#FCFBF8',   // lightest surface
@@ -29,7 +30,7 @@ const config: Config = {
         eyebrow: '0.22em',
       },
       maxWidth: {
-        shell: '78rem',
+        shell: '120rem',
         prose: '38rem',
       },
       keyframes: {
