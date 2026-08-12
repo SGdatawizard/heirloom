@@ -26,13 +26,13 @@ export default function JournalEntryPage({ params }: { params: { slug: string } 
   return (
     <SiteShell>
       <article>
-        <header className="bg-vault pb-16 pt-40 md:pb-20 md:pt-52">
+        <header className="bg-ivory pb-16 pt-40 md:pb-20 md:pt-52">
           <div className="shell max-w-3xl">
             <Reveal>
-              <p className="eyebrow">{entry.category}</p>
-              <h1 className="display-lg mt-6 text-ivory">{entry.title}</h1>
-              <p className="lede mt-8 text-mist">{entry.standfirst}</p>
-              <p className="mt-10 border-t border-champagne/15 pt-5 font-ledger text-[10px] uppercase tracking-[0.12em] text-mist/50">
+              <p className="eyebrow-light">{entry.category}</p>
+              <h1 className="display-lg mt-6 text-ink">{entry.title}</h1>
+              <p className="lede mt-8 text-slate">{entry.standfirst}</p>
+              <p className="mt-10 border-t border-ink/15 pt-5 font-ledger text-[10px] uppercase tracking-[0.12em] text-slate/80">
                 {entry.author} · {longDate(entry.date)} · {entry.readingTime}
               </p>
             </Reveal>
