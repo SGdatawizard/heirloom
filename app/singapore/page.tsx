@@ -73,7 +73,7 @@ export default function SingaporePage() {
       <section className="band bg-ivory">
         <div className="shell">
           <Reveal>
-            <p className="eyebrow">How we work in the region</p>
+            <p className="eyebrow-light">How we work in the region</p>
             <h2 className="display-lg mt-6 max-w-[20ch] text-ink">
               Through advisers first, and in person
             </h2>
