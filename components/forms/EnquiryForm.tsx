@@ -78,10 +78,10 @@ export function EnquiryForm() {
 
   if (status === 'sent') {
     return (
-      <div className="border border-gold/50 p-10 md:p-14">
-        <p className="eyebrow">Enquiry received</p>
-        <h2 className="display-md mt-6 text-ivory">Thank you. We will be in touch.</h2>
-        <p className="lede mt-6 text-mist">
+      <div className="border border-gold bg-paper p-10 md:p-14">
+        <p className="eyebrow-light">Enquiry received</p>
+        <h2 className="display-md mt-6 text-ink">Thank you. We will be in touch.</h2>
+        <p className="lede mt-6 text-slate">
           A specialist will read this personally and reply within two working days. If it is
           urgent, call us on +44 (0)20 7836 8444.
         </p>
@@ -93,7 +93,7 @@ export function EnquiryForm() {
     <form onSubmit={handleSubmit} className="space-y-12">
       {/* Enquiry type */}
       <fieldset>
-        <legend className="label">I am enquiring as</legend>
+        <legend className="label-light">I am enquiring as</legend>
         <div className="mt-4 flex flex-wrap gap-3">
           {[
             { value: 'collector', label: 'A collector' },
@@ -107,7 +107,7 @@ export function EnquiryForm() {
               className={`border px-5 py-3 font-ledger text-[10px] uppercase tracking-[0.14em] transition-colors ${
                 enquiryType === option.value
                   ? 'border-gold bg-gold text-vault'
-                  : 'border-champagne/25 text-mist hover:border-champagne'
+                  : 'border-ink/20 text-slate hover:border-ink'
               }`}
             >
               {option.label}
@@ -119,42 +119,42 @@ export function EnquiryForm() {
       {/* Identity */}
       <div className="grid gap-8 sm:grid-cols-2">
         <div>
-          <label className="label" htmlFor="full_name">
+          <label className="label-light" htmlFor="full_name">
             Full name
           </label>
-          <input id="full_name" name="full_name" required autoComplete="name" className="field" />
+          <input id="full_name" name="full_name" required autoComplete="name" className="field field-light" />
         </div>
         <div>
-          <label className="label" htmlFor="email">
+          <label className="label-light" htmlFor="email">
             Email
           </label>
-          <input id="email" name="email" type="email" required autoComplete="email" className="field" />
+          <input id="email" name="email" type="email" required autoComplete="email" className="field field-light" />
         </div>
         <div>
-          <label className="label" htmlFor="phone">
-            Telephone <span className="normal-case tracking-normal text-mist/40">optional</span>
+          <label className="label-light" htmlFor="phone">
+            Telephone <span className="normal-case tracking-normal text-slate/50">optional</span>
           </label>
-          <input id="phone" name="phone" autoComplete="tel" className="field" />
+          <input id="phone" name="phone" autoComplete="tel" className="field field-light" />
         </div>
         <div>
-          <label className="label" htmlFor="country">
+          <label className="label-light" htmlFor="country">
             Country
           </label>
-          <input id="country" name="country" autoComplete="country-name" className="field" />
+          <input id="country" name="country" autoComplete="country-name" className="field field-light" />
         </div>
         {enquiryType === 'adviser' ? (
           <div className="sm:col-span-2">
-            <label className="label" htmlFor="company">
+            <label className="label-light" htmlFor="company">
               Firm
             </label>
-            <input id="company" name="company" autoComplete="organization" className="field" />
+            <input id="company" name="company" autoComplete="organization" className="field field-light" />
           </div>
         ) : null}
       </div>
 
       {/* Interests */}
       <fieldset>
-        <legend className="label">Areas of interest</legend>
+        <legend className="label-light">Areas of interest</legend>
         <div className="mt-4 flex flex-wrap gap-3">
           {interests.map((interest) => {
             const active = selected.includes(interest.value);
@@ -166,8 +166,8 @@ export function EnquiryForm() {
                 aria-pressed={active}
                 className={`border px-4 py-2.5 font-ledger text-[10px] uppercase tracking-[0.14em] transition-colors ${
                   active
-                    ? 'border-champagne bg-champagne/10 text-champagne'
-                    : 'border-champagne/25 text-mist hover:border-champagne'
+                    ? 'border-bronze bg-gold/10 text-bronze'
+                    : 'border-ink/20 text-slate hover:border-ink'
                 }`}
               >
                 {interest.label}
@@ -178,12 +178,12 @@ export function EnquiryForm() {
       </fieldset>
 
       <div>
-        <label className="label" htmlFor="budget_band">
+        <label className="label-light" htmlFor="budget_band">
           Where you would like to start
         </label>
-        <select id="budget_band" name="budget_band" className="field appearance-none">
+        <select id="budget_band" name="budget_band" className="field field-light appearance-none">
           {budgets.map((budget) => (
-            <option key={budget.value} value={budget.value} className="bg-ink text-ivory">
+            <option key={budget.value} value={budget.value} className="bg-paper text-ink">
               {budget.label}
             </option>
           ))}
@@ -191,10 +191,10 @@ export function EnquiryForm() {
       </div>
 
       <div>
-        <label className="label" htmlFor="message">
+        <label className="label-light" htmlFor="message">
           Anything you would like us to know
         </label>
-        <textarea id="message" name="message" rows={5} className="field resize-none" />
+        <textarea id="message" name="message" rows={5} className="field field-light resize-none" />
       </div>
 
       {/* Honeypot */}
@@ -204,16 +204,16 @@ export function EnquiryForm() {
       </div>
 
       {status === 'error' ? (
-        <p className="border border-gold/50 px-5 py-4 font-ledger text-[11px] uppercase tracking-[0.1em] text-champagne">
+        <p className="border border-gold px-5 py-4 font-ledger text-[11px] uppercase tracking-[0.1em] text-bronze">
           {message}
         </p>
       ) : null}
 
-      <div className="flex flex-wrap items-center gap-6 border-t border-champagne/15 pt-8">
+      <div className="flex flex-wrap items-center gap-6 border-t border-ink/15 pt-8">
         <button type="submit" disabled={status === 'sending'} className="btn btn-gold disabled:opacity-60">
           {status === 'sending' ? 'Sending' : 'Send enquiry'}
         </button>
-        <p className="max-w-[38ch] text-[11px] leading-relaxed text-mist/50">
+        <p className="max-w-[38ch] text-[11px] leading-relaxed text-slate/70">
           We use your details to respond to this enquiry and nothing else. No marketing without
           your say-so.
         </p>
