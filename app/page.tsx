@@ -15,14 +15,14 @@ export default function HomePage() {
           aria-hidden
           className="pointer-events-none absolute -right-40 top-0 h-[40rem] w-[40rem] rounded-full bg-gold/[0.07] blur-3xl"
         />
-        <div className="shell relative grid items-center gap-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">
+        <div className="shell relative grid items-start gap-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">
           <div>
             <Reveal>
               <p className="eyebrow-light">Stanley Gibbons · Private curation</p>
             </Reveal>
 
             <Reveal delay={80}>
-              <h1 className="display-xl mt-8 text-ink">
+              <h1 className="display-xl mt-6 text-ink">
                 Proven,
                 <br />
                 not promised.
@@ -30,11 +30,11 @@ export default function HomePage() {
             </Reveal>
 
             <Reveal delay={160}>
-              <div className="rule-gold-light mt-10 max-w-md" />
+              <div className="rule-gold-light mt-8 max-w-md" />
             </Reveal>
 
             <Reveal delay={200}>
-              <p className="lede mt-10 text-slate">
+              <p className="lede mt-8 text-slate">
                 A private curation service for the finest stamps, coins and cards. Your pieces
                 are held in your name, chosen with a specialist alongside you, and evidenced by
                 records Stanley Gibbons has been keeping since 1856.
@@ -46,7 +46,7 @@ export default function HomePage() {
             </Reveal>
 
             <Reveal delay={280}>
-              <div className="mt-12 flex flex-wrap gap-4">
+              <div className="mt-10 flex flex-wrap gap-4">
                 <Link href="/enquire" className="btn btn-gold">
                   Request an introduction
                 </Link>
@@ -68,7 +68,7 @@ export default function HomePage() {
               />
 
               <div className="mt-7">
-                <p className="font-ledger text-[10px] uppercase tracking-eyebrow text-bronze">
+                <p className="font-ledger text-[12px] font-medium uppercase tracking-eyebrow text-bronze">
                   {sampleRecord.reference}
                 </p>
                 <h2 className="mt-2 font-display text-2xl font-light leading-snug text-ink">
@@ -137,7 +137,7 @@ export default function HomePage() {
           <div className="mt-16 grid gap-px bg-ink/10 md:grid-cols-3">
             {pillars.map((pillar, i) => (
               <Reveal key={pillar.id} delay={i * 90} className="bg-ivory p-8 md:p-10">
-                <p className="font-ledger text-[10px] uppercase tracking-eyebrow text-bronze">
+                <p className="font-ledger text-[12px] font-medium uppercase tracking-eyebrow text-bronze">
                   {pillar.title}
                 </p>
                 <p className="mt-6 text-[15px] leading-[1.8] text-slate">{pillar.body}</p>
@@ -193,7 +193,7 @@ export default function HomePage() {
           <Reveal>
             <p className="eyebrow">What we curate</p>
             <h2 className="display-lg mt-6 max-w-[20ch] text-ivory">
-              Three verticals at launch. A fourth when the blueprint is proven.
+              Four options, tailored to your preferences.
             </h2>
           </Reveal>
 
@@ -211,7 +211,7 @@ export default function HomePage() {
                     <span className="block font-display text-3xl font-light text-ivory transition-colors group-hover:text-champagne">
                       {vertical.name}
                     </span>
-                    <span className="mt-1 block font-ledger text-[10px] uppercase tracking-eyebrow text-mist/50">
+                    <span className="mt-1 block font-ledger text-[11px] uppercase tracking-eyebrow text-mist/50">
                       {vertical.kind}
                       {vertical.forthcoming ? ' · To follow' : ''}
                     </span>
@@ -248,7 +248,7 @@ export default function HomePage() {
                 }`}
               >
                 <p
-                  className={`font-ledger text-[10px] uppercase tracking-eyebrow ${
+                  className={`font-ledger text-[12px] font-medium uppercase tracking-eyebrow ${
                     tier.featured ? 'text-champagne' : 'text-bronze'
                   }`}
                 >
@@ -343,7 +343,7 @@ export default function HomePage() {
             {journal.map((entry, i) => (
               <Reveal key={entry.slug} delay={i * 80} className="bg-vault">
                 <Link href={`/journal/${entry.slug}`} className="group block h-full p-8">
-                  <p className="font-ledger text-[10px] uppercase tracking-eyebrow text-gold">
+                  <p className="font-ledger text-[12px] font-medium uppercase tracking-eyebrow text-gold">
                     {entry.category}
                   </p>
                   <h3 className="mt-6 font-display text-2xl font-light leading-snug text-ivory transition-colors group-hover:text-champagne">
