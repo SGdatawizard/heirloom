@@ -10,6 +10,10 @@ import { primaryNav } from '@/lib/site';
  * The masthead sits on cream across the whole site. Every page opens on the
  * same light surface, so the header never has to change character mid-scroll —
  * navy is used lower down the page as the depth band, not as the chrome.
+ *
+ * Hovering a nav item draws a gold hairline beneath it, left to right. The
+ * current section keeps that rule permanently, so the underline doubles as the
+ * "you are here" marker rather than being decoration.
  */
 export function Header({ signedIn = false }: { signedIn?: boolean }) {
   const pathname = usePathname();
@@ -41,18 +45,25 @@ export function Header({ signedIn = false }: { signedIn?: boolean }) {
       <div className="shell flex items-center justify-between py-5">
         <Wordmark tone="dark" compact />
 
-        <nav className="hidden items-center gap-8 xl:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-6 xl:flex" aria-label="Primary">
           {primaryNav.map((item) => {
             const active = pathname.startsWith(item.href);
             return (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`font-ledger text-[10px] uppercase tracking-[0.16em] transition-colors duration-300 ${
+                aria-current={active ? 'page' : undefined}
+                className={`group relative whitespace-nowrap py-1 font-ledger text-[12px] uppercase tracking-[0.12em] transition-colors duration-300 ${
                   active ? 'text-ink' : 'text-slate hover:text-ink'
                 }`}
               >
                 {item.label}
+                <span
+                  aria-hidden
+                  className={`absolute -bottom-0.5 left-0 h-px w-full origin-left bg-gold transition-transform duration-300 ease-out ${
+                    active ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                  }`}
+                />
               </Link>
             );
           })}
@@ -61,11 +72,15 @@ export function Header({ signedIn = false }: { signedIn?: boolean }) {
         <div className="hidden items-center gap-5 xl:flex">
           <Link
             href={signedIn ? '/portal' : '/login'}
-            className="font-ledger text-[10px] uppercase tracking-[0.16em] text-slate transition-colors hover:text-ink"
+            className="group relative whitespace-nowrap py-1 font-ledger text-[12px] uppercase tracking-[0.12em] text-slate transition-colors duration-300 hover:text-ink"
           >
-            {signedIn ? 'Your portfolio' : 'Client login'}
+            {signedIn ? 'Portfolio' : 'Login'}
+            <span
+              aria-hidden
+              className="absolute -bottom-0.5 left-0 h-px w-full origin-left scale-x-0 bg-gold transition-transform duration-300 ease-out group-hover:scale-x-100"
+            />
           </Link>
-          <Link href="/enquire" className="btn btn-ink !px-5 !py-2.5">
+          <Link href="/enquire" className="btn btn-ink !px-5 !py-2.5 !text-[12px]">
             Enquire
           </Link>
         </div>
@@ -95,7 +110,7 @@ export function Header({ signedIn = false }: { signedIn?: boolean }) {
               <Link
                 key={item.href}
                 href={item.href}
-                className="border-b border-ink/10 py-4 font-display text-2xl font-light text-ink"
+                className="border-b border-ink/10 py-4 font-display text-2xl font-light text-ink transition-colors hover:text-bronze"
               >
                 {item.label}
               </Link>
