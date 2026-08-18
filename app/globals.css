@@ -48,12 +48,12 @@
 
   /* ---- Type roles ---- */
   .eyebrow {
-    @apply font-ledger text-[10px] uppercase tracking-eyebrow text-gold;
+    @apply font-ledger text-[12px] font-medium uppercase tracking-eyebrow text-gold;
   }
 
   /* Same device on cream. Deeper gold so small caps stay legible. */
   .eyebrow-light {
-    @apply font-ledger text-[10px] uppercase tracking-eyebrow text-bronze;
+    @apply font-ledger text-[12px] font-medium uppercase tracking-eyebrow text-bronze;
   }
 
   .display-xl {
@@ -136,11 +136,11 @@
   }
 
   .label {
-    @apply mb-1 block font-ledger text-[10px] uppercase tracking-eyebrow text-gold;
+    @apply mb-1 block font-ledger text-[11px] font-medium uppercase tracking-eyebrow text-gold;
   }
 
   .label-light {
-    @apply mb-1 block font-ledger text-[10px] uppercase tracking-eyebrow text-bronze;
+    @apply mb-1 block font-ledger text-[11px] font-medium uppercase tracking-eyebrow text-bronze;
   }
 
   /* ---- Specimen frame: image slots are mounted, not dropped in ---- */
