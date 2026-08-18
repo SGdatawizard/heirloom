@@ -16,12 +16,12 @@ export function Wordmark({
   compact?: boolean;
 }) {
   const primary = tone === 'light' ? 'text-ivory' : 'text-ink';
-  const secondary = tone === 'light' ? 'text-champagne' : 'text-gold';
+  const secondary = tone === 'light' ? 'text-champagne' : 'text-bronze';
 
   return (
     <Link href="/" className="group inline-block" aria-label="SG Heirloom — home">
       <span
-        className={`block font-display ${compact ? 'text-[13px]' : 'text-[15px]'} font-normal uppercase leading-[1.35] tracking-wordmark ${primary}`}
+        className={`block font-display ${compact ? 'text-[19px]' : 'text-[22px]'} font-normal uppercase leading-[1.25] tracking-[0.3em] ${primary}`}
       >
         Stanley
         <br />
@@ -29,7 +29,7 @@ export function Wordmark({
       </span>
       <span className="mt-2 flex items-center gap-2.5">
         <span className="h-px w-6 bg-gold transition-all duration-500 group-hover:w-10" />
-        <span className={`font-ledger text-[9px] uppercase tracking-eyebrow ${secondary}`}>
+        <span className={`font-ledger text-[11px] font-medium uppercase tracking-eyebrow ${secondary}`}>
           Heirloom
         </span>
       </span>
