@@ -39,7 +39,7 @@
   /* Full-bleed shell. Content runs the width of the display with generous
      gutters, capped at 1920px so it does not sprawl on ultrawide monitors. */
   .shell {
-    @apply mx-auto w-full max-w-shell px-6 md:px-10 lg:px-16 xl:px-24;
+    @apply mx-auto w-full max-w-shell px-6 md:px-10 lg:px-14 xl:px-16 2xl:px-24;
   }
 
   .band {
