@@ -87,7 +87,7 @@ export const verticals = [
     number: 'IV',
     name: 'Trading cards',
     kind: 'Cards',
-    lead: 'Iconic Pokémon and Magic: The Gathering, when the blueprint is proven.',
+    lead: 'Iconic Pokémon and Magic: The Gathering.',
     body:
       'A fast-growing global market with rapidly changing values, and a natural fit for a younger, growth-minded collector. It follows the launch verticals rather than leading them: we open it once the operating model is proven on stamps and coins.',
     marker: 'Follows launch — the fourth vertical, not the first',
